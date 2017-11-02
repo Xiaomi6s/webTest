@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <style>
+    em {
+      font-style: normal;
+    }
+    .pink_red {
+      color: #ff558a;
+    }
+    #desc {
+      font-size: 14px;
+    }
+    /*标签指定性选择器, 既是h3标签又有title-msg属性*/
+    h3.title-msg {
+      color: red;
+    }
+    /*后代选择器*/
+    h3 p {
+
+    }
+    /*子代选择器*/
+    h1 > strong {
+
+    }
+    /*未访问过*/
+    a:link {
+
+    }
+    /*被访问过的*/
+    a:visited {
+
+    }
+    /*鼠标悬停的时候*/
+    a:hover {
+
+    }
+    /*被点击的时候*/
+    a:active {
+
+    }
+
+    /*顺序最好不要改变 LoVe HAte*/
+    /*伪元素*/
+    /*第一行*/
+    .article-text::first-line {
+      color: red;
+    }
+    /*第一个字符*/
+    .article-text::first-letter {
+      font-size: 50px;
+    }
+    span:first-child {
+      color: green;
+    }
+    .wrap::before, .wrap::after {
+      content: "--------";
+      /*转换为块级标签*/
+      display: block;
+    }
+
+    /*css的层叠*/
+    .box {
+      background-color: red;
+      width: 200px;
+      height: 200px;
+    }
+    .wrap {
+      background-color: green;
+    }
+    .box {
+      background-color: blue;
+    }
+
+/*css的继承性，子容器可以继承父容器的一些样式。可以继承的大多是与文字相关的如字体、字号、颜色、行距等，一些是不能继承的，如边框，外边距、内边距、背景、定位、元素宽高属性，所有盒子属性都不能继承。*/
+    .box2 {
+      color: yellow;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- <h1><em class="pink_red">大前端时代</em>已经到来</h1> -->
+    <h3 class="title-msg">我是一个h3标签</h3>
+    <h3>我是另一个h3</h3>
+    <p class="title-msg">我是一个段落标签</p>
+
+    伪元素
+    <p class="article-text">网易科技讯 10月31日消息，据英国卫报报道，行走于技术和生物学的边缘之间，“身体黑客”先驱们正在挑战自然，重新设计他们自己的身体，以便让他们拥有超越人类的能力。这真的代表着未来趋势吗?</p>
+
+    <div>
+      <span>我是一个span1</span>
+      <span>我是一个span2</span>
+      <span>我是一个span3</span>
+    </div>
+
+    <div><hr></div>
+    <div class="wrap">
+      我是一个div
+    </div>
+    <div><hr></div>
+
+    <div class="box wrap">
+
+    </div>
+
+    <div class="box2"> 我是一个div
+      <p>
+        我是一个段落
+      </p>
+
+    </div>
+
+  </body>
+</html>

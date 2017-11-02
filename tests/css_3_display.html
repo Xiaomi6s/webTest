@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>display</title>
+    <style>
+    div {
+      background-color: silver;
+      display: inline; /*可以让元素变成行内模式标签*/
+
+    }
+    strong {
+      display: block;
+      /*设置display为none可以让整个标签在页面中移除掉*/
+      /*display: none; */ /*直接把当前标签从页面中移除，不占用页面内空间，不影响页面布局*/
+      background-color: yellow;
+      /*只是不显示，但是还占用页面内的空间*/
+      visibility: hidden;
+    }
+    /*行内元素不能设置宽高,块级元素和行内块级元素可以设置宽高，况且行内元素只要左右边距*/
+    .demo-inline {
+      /*行内块标签*/
+      display: inline-block;
+      height: 200px;
+      background-color: rgb(100, 100, 100);
+    }
+    /*行内元素是不能设置宽高的，只能通过他的内容撑开他的宽高，如果设置宽高也不起作用*/
+    span {
+      height: 200px;
+      background-color: silver;
+      font-style: "%u5FAE%u8F6F%u96C5%u9ED1", "Lucida Console";
+      font-weight: bold;
+      /*font-weight: 700;  100-900 100的整数倍 400：正常 700：加粗 900 更粗*/
+      /*使用文字本身的斜体样式显示*/
+      font-style: italic;
+      font-style: normal;
+      /*让文字进行倾斜*/
+      font-style: oblique;
+
+    }
+    </style>
+  </head>
+  <body>
+    <!-- 行内标签 -->
+    <span>我是span</span>
+    <strong>我是strong</strong>
+    <s>我是一个s标签</s>
+    <!-- 块级标签 -->
+    <div class="">
+      我是一个div
+    </div>
+    <div class="demo-inline">
+      我是一个行内块标签
+    </div>
+
+  </body>
+</html>

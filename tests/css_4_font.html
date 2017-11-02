@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>font合写</title>
+    <style>
+    /*p {
+      font-size: 20px;
+      font-weight: 700;
+      font-style: oblique;
+      font-family: sans-serif;
+    }*/
+    /*font：font-style font-weight font-size/line-height font-family*/
+    /*不需要设置的属性可以省略（取默认值）但必须保留 font-size 和 font-family属性，否则font属性不起作用*/
+    p {
+      color: #89049e;
+      font: oblique 700 20px sans-serif;
+    }
+    .letter-spancingdemo {
+      /*控制字符间距*/
+      letter-spacing: 20px;
+    }
+    .word-spacingdemo {
+      word-spacing: 20px;
+    }
+    a {
+      background-color: silver;
+      /*font-size: 20px;
+      font-weight: 700;
+      font-family: "黑体";*/
+      font: 20px 700 "黑体";
+      display: block;
+      width: 200px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      word-spacing: 30px;
+    }
+    .line-heightDemo {
+      height: 100px;
+      background-color: silver;
+      line-height: 100px;
+      text-align: center;
+    }
+    .box {
+      background-color: yellow;
+      font: 16px "黑体";
+    }
+    .box p {
+      background-color: pink;
+      font: 20px/1.5em "宋体"; /*此时行高为30 1.5em是根据当前标签的字体大小为参考*/
+    }
+    /*空白符处理*/
+    .box-white {
+      background-color: red;
+      /*超出盒子部分不进行换行*/
+      /*white-space: nowrap;*/
+      /*超出盒子部分进行换行*/
+      /*white-space: normal;*/
+      /*写的什么样式，显示成什么样式*/
+      white-space: pre;
+      /*不打断单词的完整性*/
+      word-break: normal;
+      /*运行单词内换行*/
+      word-break: break-all;
+      /*只能在半角空格活连字符处换行*/
+      word-break: keep-all;
+    }
+
+    </style>
+  </head>
+  <body>
+    <p>
+      我是一个p标签
+    </p>
+    <p class="letter-spancingdemo">
+      我是另一个p标签
+    </p>
+    <p class="word-spacingdemo">
+       I am a coder;
+    </p>
+
+
+    <a href="#">按 钮</a>
+
+    <p class="line-heightDemo">我是一个p标签</p>
+    <div class="box">
+      我是父div的文本内容
+      <p>我是子段落标签的文本</p>
+      我是父div的文本内容
+    </div>
+    <p class="box-white">我是段落标签的文本我是段落标签的文本我是段落标签的文本我是段落标签的文本我是段落标签的文本我是段落标签的文本我是段落标签的文本我是段落标签的文本</p>
+
+
+  </body>
+</html>
